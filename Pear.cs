@@ -11,26 +11,19 @@ namespace laba4
     class Pear : GardenTree
     {
         public pear sort;
-        private static int number = 0;
-        public Pear( pear sort, int age, int fecundity)
+        public Pear(int num, pear sort, int age, int fecundity)
         {
+            this.num= num;  
             this.sort = sort;
             this.age = age;
             this.fecundity = fecundity;
-            number++;
+           
         }
-        ~Pear()
-        {
-            number--;
-        }
-        public static int Num()
-        {
-            return number;
-        }
+     
         public override void Show()
         {
             {
-                Console.WriteLine($"Номер груші: {number};сорт:{sort};вік: {age}; плодовитість: {fecundity};");
+                Console.Write($"Номер груші: {num};сорт:{sort};вік: {age}; плодовитість: {fecundity};");
 
             }
         }
