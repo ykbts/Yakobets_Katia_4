@@ -10,7 +10,6 @@ namespace laba4
     { fucsa, pumila, sylvestris }
     class Apple: GardenTree
     {
-       private static int number=1;
         public apple sort;
        
       public Apple(int num, apple sort, int age,int fecundity)

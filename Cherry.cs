@@ -11,7 +11,7 @@ namespace laba4
     class Cherry : GardenTree
     {
         public cherry sort;
-        private static int number = 0;
+     
         public Cherry(int num, cherry sort, int age, int fecundity) {
           
             this.age = age;
