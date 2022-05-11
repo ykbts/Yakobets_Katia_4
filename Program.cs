@@ -12,66 +12,39 @@ namespace laba4
 
         static void Main(string[] args)
         {
-
-           
-
-            Apple apple1 = new Apple(apple.pumila, 9, 40); apple1.Show();
-            Apple apple2 = new Apple(apple.sylvestris, 9, 60); apple2.Show();
-
-
-            Cherry cherry1 = new Cherry(cherry.prunus_incisa, 9, 30); cherry1.Show();
-            Cherry cherry2 = new Cherry(cherry.prunus_cerasus, 12, 50); cherry2.Show(); 
-            Cherry cherry3 = new Cherry(cherry.prunus_incisa, 1, 9); cherry3.Show();
-
-            Pear pear1 = new Pear(pear.klapa, 2, 10); pear1.Show(); 
-            Pear pear2 = new Pear(pear.lada, 6, 89);pear2.Show();
-
-            Plum plum1 = new Plum(plum.nigra, 10, 27); plum1.Show();
-            Plum plum2 = new Plum( plum.americana, 4, 90); plum2.Show();
-
-
-            Console.WriteLine();
-
-
-            List<Apple> a = new List<Apple>() { apple1, apple2 };
-            foreach(Apple apple in a)
+            List<Apple> a = new List<Apple>()
             {
-               if (apple.age>8 && apple.fecundity<50 )
-                {
-                    
-                    Console.WriteLine("Яблуню: "+apple.sort+"----необхідно пересадити.Дані про плід: "+apple.fecundity); }
-
-            }
-
-            List<Cherry> c = new List<Cherry>() { cherry1, cherry2, cherry3 };
-            foreach (Cherry cherry in c)
+             new Apple(1,apple.pumila, 9, 40),
+             new Apple(2,apple.sylvestris, 9, 60),
+            };
+            List<Cherry> c = new List<Cherry>()
             {
-                if (cherry.age > 10 && cherry.fecundity < 60)
-                {
+                 new Cherry(3,cherry.prunus_incisa, 9, 30),
+             new Cherry(4,cherry.prunus_cerasus, 12, 50),
+             new Cherry(5,cherry.prunus_incisa, 1, 9),
+            };
 
-                    Console.WriteLine("Вишню: "+cherry.sort+ "----необхідно пересадити.Дані про плід: " + cherry.fecundity);
-                }
-            }
-
-            List<Pear> p = new List<Pear>() { pear1,pear2 };
-            foreach (Pear pear in p)
+            List<Pear> p = new List<Pear>()
             {
-                if (pear.age > 6 && pear.fecundity < 50)
-                {
 
-                    Console.WriteLine("Грушу: "+pear.sort+ "----необхідно пересадити.Дані про плід: " + pear.fecundity);
-                }
-            }
-
-            List<Plum> pl = new List<Plum>() { plum1, plum2 };
-            foreach (Plum plum in pl)
+             new Pear(6,pear.klapa, 2, 10),
+             new Pear(7,pear.lada, 6, 89),
+            };
+            List<Plum> pl = new List<Plum>()
             {
-                if (plum.age > 5 && plum.fecundity < 30)
-                {
-                   
-                    Console.WriteLine("Сливу: "+plum.sort+ "----необхідно пересадити.Дані про плід: " + plum.fecundity);
-                }
-            }
+             new Plum(8,plum.nigra, 10, 27),
+             new Plum(9,plum.americana, 4, 90),
+
+            };
+
+
+            List<Object> dereva = new List<Object>();
+            dereva.Add(a); dereva.Add(c); dereva.Add(p); dereva.Add(pl);
+
+
+            Garden.Peresadka(a, c, p, pl);
+
+            Garden.Plid(a, c, p, pl);
 
 
         }

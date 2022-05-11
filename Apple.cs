@@ -10,17 +10,16 @@ namespace laba4
     { fucsa, pumila, sylvestris }
     class Apple: GardenTree
     {
-       private static int number=0;
+       private static int number=1;
         public apple sort;
        
-      public Apple( apple sort, int age,int fecundity)
+      public Apple(int num, apple sort, int age,int fecundity)
         {
-            number++;
             this.sort = sort;
             this.age= age;
             this.fecundity = fecundity;
-           
-           
+            this.num = num;
+
         }
       
       
@@ -32,21 +31,15 @@ namespace laba4
             }
         }
       
-        ~Apple()
-        {
-            number--;
-        }
-        public static int Num()
-        {
-            return number;
-        }
+      
         public override void Show()
         {
             {
-                Console.WriteLine($"Номер яблуні: {number}; сорт:{sort};вік: {age}; плодовитість: {fecundity};");
+                Console.Write($"Номер яблуні: {num}; сорт:{sort};вік: {age}; плодовитість: {fecundity};");
 
             }
         }
+        
 
 
     }

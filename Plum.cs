@@ -11,28 +11,21 @@ namespace laba4
     class Plum : GardenTree
     {
         public plum sort;
-        private static int number = 0;
-        public Plum( plum sort, int age, int fecundity)
+       
+        public Plum(int num, plum sort, int age, int fecundity)
         {
             this.sort = sort;
 
             this.age = age;
             this.fecundity = fecundity;
-            number++;
+            this.num = num;
         }
-        ~Plum()
-        {
-            number--;
-        }
-        public static int Num()
-        {
-            return number;
-        }
+      
         public override void Show()
         {
             {
-                Console.WriteLine($"Номер сливи: {number};сорт:{sort};вік: {age}; плодовитість: {fecundity};");
-
+                Console.Write($"Номер сливи: {num};сорт:{sort};вік: {age}; плодовитість: {fecundity};");
+                
             }
         }
         public override void Grow()

@@ -12,26 +12,20 @@ namespace laba4
     {
         public cherry sort;
         private static int number = 0;
-        public Cherry( cherry sort, int age, int fecundity) {
-            number++;
+        public Cherry(int num, cherry sort, int age, int fecundity) {
+          
             this.age = age;
             this.fecundity = fecundity;
             this.sort = sort;
-        }
-        ~Cherry()
-        {
-            number--;
-        }
-        public static int Num()
-        {
-            return number;
+            this.num = num;
             
         }
+      
         public override void  Show()
         {
             {
                
-                Console.WriteLine($"Номер вишні: {number};сорт:{sort};вік: {age}; плодовитість: {fecundity};");
+                Console.Write($"Номер вишні: {num};сорт:{sort};вік: {age}; плодовитість: {fecundity};");
 
             }
         }
@@ -42,5 +36,6 @@ namespace laba4
             
         }
 
+      
     }
 }

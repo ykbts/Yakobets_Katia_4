@@ -8,7 +8,7 @@ namespace laba4
 {
     abstract class GardenTree
     {
-      
+       public  int num { get; set; }
         public int age { get; set; }
         public int fecundity { get; set; }
        
